@@ -1,6 +1,5 @@
 <?php
-class Persona extends Modelo 
-{
+class Persona extends Modelo{
     protected $nombre;
     protected $apellido;
     protected $edad;
@@ -9,60 +8,55 @@ class Persona extends Modelo
     protected $documento;
     protected $direccion;
 
-    public function __construct(
-        $id,    
-        $table,
-        $connection
-    )
-    {
-        parent ::__construct($id,$table,$connection);
+    public function __construct($id, $table, $connection) {
+        parent::__construct($id, $table, $connection);
     }
-
-    public function getNombre(){
+    public function getNombre() {
         return $this->nombre;
     }
-    public function getApellido(){
+    public function getApellido() {
         return $this->apellido;
     }
-    public function getEdad(){
+    public function getEdad() {
         return $this->edad;
     }
-    public function getTelefono(){
+    public function getTelefono() {
         return $this->telefono;
     }
-    public function getCorreo(){
+    public function getCorreo() {
         return $this->correo;
     }
-    public function getDocumento(){
+    public function getDocumento() {
         return $this->documento;
     }
-    public function getDireccion(){
+    public function getDireccion() {
         return $this->direccion;
     }
-    public function setNombre($nombre){
-        return $this->nombre = $nombre;
+    public function setNombre($name){
+        $this->nombre = $name;
     }
-    public function setApellido($apellido){
-        return $this->apellido = $apellido;
+    public function setApellido($lastname){
+        $this->apellido = $lastname;
     }
-    public function setEdad($edad){
-        return $this->edad = $edad;
+    public function setEdad($age){
+        $this->edad = $age;
     }
-    public function setTelefono($telefono){
-        return $this->telefono = $telefono;
+    public function setTelefono($phone){
+        $this->telefono = $phone;
     }
-    public function setCorreo($correo){
-        return $this->correo = $correo;
+    public function setCorreo($email){
+        $this->correo = $email;
     }
-    public function setDocumento($documento){
-        return $this->documento = $documento;
+    public function setDocumento($document){
+        $this->documento = $document;
     }
-    public function setDireccion($direccion){
-        return $this->direccion = $direccion;
+    public function setDireccion($adress){
+        $this->direccion = $adress;
     }
 
-    public function getFullName(){
+    public function getFullName() {
         return "El nombre completo es: ".$this->nombre." ".$this->apellido;
     }
 
 }
+?>

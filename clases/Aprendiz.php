@@ -1,26 +1,24 @@
 <?php
 include_once("Persona.php");
-class Aprendiz extends Persona {
-    protected $cuenta;
-    protected $promedio;
+class Aprendiz extends Persona{
+    private $ficha;
+    private $promedio;
 
-    public function __construct(
-        PDO $connection
-    )
-    {
+    public function __construct(PDO $connection) {
         parent::__construct("id", "users", $connection);
     }
 
-    public function getCuenta(){
-        return $this->cuenta;
+    public function getficha() {
+        return $this->ficha;
     }
-    public function getPromedio(){
+    public function getpromedio() {
         return $this->promedio;
     }
-    public function setCuenta($cuenta){
-        return $this->cuenta = $cuenta;
+    public function setficha($ficha){
+        $this->ficha = $ficha;
     }
-    public function setPromedio($promedio){
-        return $this->promedio = $promedio;
+    public function setpromedio($promedio){
+        $this->promedio = $promedio;
     }
 }
+?>
